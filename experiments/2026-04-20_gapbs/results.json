@@ -1,0 +1,15 @@
+{
+  "graph": "roadNet-CA (SuiteSparse SNAP)",
+  "n": 1971281,
+  "edges_directed": 5533214,
+  "edges_undirected": 2766607,
+  "seed": 3,
+  "seed_degree": 4,
+  "swift_us_best": 30007.708,
+  "swift_reached": 1957027,
+  "swift_mteps": 184.3930899354259,
+  "scipy_us_best": 38082.292,
+  "scipy_reached": 1957027,
+  "scipy_mteps": 145.2962442491644,
+  "swift_over_scipy": 1.2690836634374076
+}

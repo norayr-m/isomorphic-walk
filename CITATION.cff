@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "bfslib: a zero-allocation Swift CSR graph BFS for Apple Silicon"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Matevosyan
+    given-names: Norayr
+year: 2026
+license: MIT
+abstract: >
+  bfslib is a single C-callable BFS function exposed from a Swift dynamic
+  library, with a Python ctypes wrapper. It traverses Compressed Sparse
+  Row contact graphs at ~4 ns/edge on Apple Silicon, completing a
+  313 236-atom HIV-1 capsid BFS in 6 ms on an M5 Max. Designed for
+  graph-traversal-bottlenecked workloads on biological structures at
+  scales where standard normal-mode libraries hit memory walls.
+  Amateur engineering project; no competitive claims beyond the measured
+  numbers in the repository.
+keywords:
+  - graph
+  - BFS
+  - CSR
+  - apple-silicon
+  - biomolecular
+  - GNN
+  - bioinformatics

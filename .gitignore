@@ -1,0 +1,40 @@
+# Swift build artifacts
+engine/swift/.build/
+engine/swift/.swiftpm/
+engine/swift/Package.resolved
+*.dSYM/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Build outputs
+*.dylib
+*.so
+
+# Experiment scratch (keep results.json, ignore intermediate dumps)
+experiments/**/*.bin
+experiments/**/*.cif
+experiments/**/scratch/
+scratch/
+/tmp/
+
+# Large input files (downloaded separately)
+*.cif
+*.tar.gz
+*.txt.gz
+
+# Allow specific small fixtures back
+!engine/swift/Tests/**/*.cif

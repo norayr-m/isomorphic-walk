@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Viewer 1 — Asymptotic scaling: HIV-1 capsid BFS in 6 ms</title>
+<style>
+  html, body { margin:0; padding:0; height:100%; background:#0e0e12; color:#e8e8ee;
+    font-family: -apple-system, system-ui, sans-serif; }
+  #viewport { position:absolute; top:0; left:0; right:0; bottom:160px; }
+  .panel { position:absolute; left:0; right:0; bottom:0; height:160px;
+    padding:14px 22px; background:rgba(14,14,18,0.96); border-top:1px solid #333; }
+  h1 { font-size:17px; margin:0 0 4px 0; font-weight:600; color:#ffd54f; }
+  .sub { font-size:12px; color:#9e9e9e; margin:0 0 10px 0; }
+  table { font-size:13px; border-collapse:collapse; width:100%; max-width:920px; }
+  td, th { padding:4px 12px 4px 0; text-align:left; }
+  th { font-weight:600; color:#aaa; border-bottom:1px solid #333; }
+  .oom { color:#ef5350; font-weight:600; }
+  .ok { color:#66bb6a; }
+  .hint { font-size:11px; color:#666; margin-top:8px; }
+</style>
+</head>
+<body>
+<div id="viewport"></div>
+<div class="panel">
+  <h1>Asymptotic scaling — Swift BFS on HIV-1 capsid (PDB 3J3Q)</h1>
+  <div class="sub">The load-bearing claim: there is a system size where the incumbent normal-mode tool cannot run on commodity hardware, and ours can.</div>
+  <table>
+    <thead><tr><th>system</th><th>N (Cα/P atoms)</th><th>edges</th><th>Swift BFS</th><th>ProDy GNM (modes)</th></tr></thead>
+    <tbody>
+      <tr><td>Adenylate kinase</td><td>428</td><td>5 832</td><td class="ok">8.6 µs</td><td>37 ms</td></tr>
+      <tr><td>70S ribosome (4V9D)</td><td>20 908</td><td>298 174</td><td class="ok">0.43 ms</td><td>218 s</td></tr>
+      <tr><td><b>HIV-1 capsid (3J3Q)</b></td><td><b>313 236</b></td><td><b>4 269 528</b></td>
+          <td class="ok"><b>6 ms</b></td>
+          <td class="oom"><b>intractable — 784 GB Kirchhoff &gt; 128 GB RAM</b></td></tr>
+    </tbody>
+  </table>
+  <div class="hint">Drag to rotate · scroll to zoom · all numbers measured on one M5 Max laptop, single thread · amateur engineering project, no competitive claims.</div>
+</div>
+
+<script src="https://unpkg.com/ngl@2.3.0/dist/ngl.js"></script>
+<script>
+  const stage = new NGL.Stage("viewport", { backgroundColor: "#0e0e12" });
+  window.addEventListener("resize", () => stage.handleResize());
+  stage.loadFile("rcsb://3J3Q.mmtf", { defaultRepresentation: false })
+    .then(o => {
+      o.addRepresentation("surface", {
+        surfaceType: "sas",
+        probeRadius: 1.4,
+        colorScheme: "chainid",
+        opacity: 0.92,
+        side: "front"
+      });
+      o.autoView();
+      const rot = () => { stage.spinAnimation.axis.set(0, 1, 0); stage.setSpin(true); };
+      rot();
+    })
+    .catch(err => {
+      document.getElementById("viewport").innerHTML =
+        '<div style="padding:40px; color:#ef5350; font-family:monospace;">' +
+        'Failed to fetch 3J3Q from RCSB. Offline? Try: http://localhost:&lt;port&gt;/ with a local MMTF.<br><br>' +
+        String(err) + '</div>';
+    });
+</script>
+</body>
+</html>

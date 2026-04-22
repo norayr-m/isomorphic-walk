@@ -1,0 +1,35 @@
+{
+  "graph": "ribosome rebuilt",
+  "n": 10739,
+  "edges": 152946,
+  "seed": 5542,
+  "rows": [
+    {
+      "k": 2,
+      "pyg_us_best": 680.583,
+      "swift_full_us_best": 117.875,
+      "swift_clip_us_best": 267.25,
+      "scipy_us_best": 279.166,
+      "swift_vs_pyg": 2.5466155285313374,
+      "swift_vs_scipy": 2.368322375397667
+    },
+    {
+      "k": 3,
+      "pyg_us_best": 666.167,
+      "swift_full_us_best": 133.917,
+      "swift_clip_us_best": 123.458,
+      "scipy_us_best": 355.125,
+      "swift_vs_pyg": 5.3958998201817625,
+      "swift_vs_scipy": 2.6518291180357982
+    },
+    {
+      "k": 4,
+      "pyg_us_best": 966.542,
+      "swift_full_us_best": 124.292,
+      "swift_clip_us_best": 110.042,
+      "scipy_us_best": 369.0,
+      "swift_vs_pyg": 8.783391795859762,
+      "swift_vs_scipy": 2.9688153702571363
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "system": "AK",
+      "n": 428,
+      "edges": 5832,
+      "knn_build_s": 0.0028726659948006272,
+      "swift_us_best": 8.583,
+      "scipy_us_best": 22.375,
+      "prody_gnm_ms": 36.66625000187196,
+      "prody_status": "ok"
+    },
+    {
+      "system": "MBP",
+      "n": 370,
+      "edges": 5056,
+      "knn_build_s": 0.0016582910029683262,
+      "swift_us_best": 7.292,
+      "scipy_us_best": 27.792,
+      "prody_gnm_ms": 32.63325002626516,
+      "prody_status": "ok"
+    },
+    {
+      "system": "Abl",
+      "n": 782,
+      "edges": 10792,
+      "knn_build_s": 0.0030986249912530184,
+      "swift_us_best": 8.959,
+      "scipy_us_best": 31.917,
+      "prody_gnm_ms": 78.98779099923559,
+      "prody_status": "ok"
+    },
+    {
+      "system": "ribosome",
+      "n": 20908,
+      "edges": 298174,
+      "knn_build_s": 0.1324763750017155,
+      "swift_us_best": 431.25,
+      "scipy_us_best": 711.209,
+      "prody_gnm_ms": 217533.7951249967,
+      "prody_status": "ok"
+    },
+    {
+      "system": "HIV-1 capsid",
+      "n": 313236,
+      "edges": 4269528,
+      "knn_build_s": 2.195302458014339,
+      "swift_us_best": 5997.667,
+      "scipy_us_best": 10496.458,
+      "prody_gnm_ms": null,
+      "prody_status": "skipped (predicted intractable)"
+    }
+  ],
+  "k_nn": 12
+}

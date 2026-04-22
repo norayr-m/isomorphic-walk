@@ -1,0 +1,43 @@
+{
+  "note": "pilot, results-not-counted",
+  "rows": [
+    {
+      "id": "Calmodulin-hinge",
+      "status": "OK",
+      "n_matched": 142,
+      "n_edges_A": 170,
+      "n_edges_B": 192,
+      "n_components_A": 3,
+      "n_components_B": 2,
+      "lambda_2_A": 0.010563096069135733,
+      "lambda_2_B": 0.01728030037294592,
+      "hinge_seed_index": 71,
+      "total_snap_count": 59,
+      "reached_count": 59,
+      "rho_snap_vs_disp": 0.6908686597005425,
+      "rho_euclid_vs_disp": 0.33430429324945354,
+      "delta_rho": 0.3565643664510889,
+      "tm_score": 0.5004958515921398,
+      "rmsd_kabsch_A": 15.109964460437931
+    },
+    {
+      "id": "TIM-shear",
+      "status": "OK",
+      "n_matched": 247,
+      "n_edges_A": 319,
+      "n_edges_B": 315,
+      "n_components_A": 1,
+      "n_components_B": 1,
+      "lambda_2_A": 0.009118932798702895,
+      "lambda_2_B": 0.011250689747836641,
+      "hinge_seed_index": 184,
+      "total_snap_count": 110,
+      "reached_count": 110,
+      "rho_snap_vs_disp": 0.23209376572732685,
+      "rho_euclid_vs_disp": 0.25766156904092224,
+      "delta_rho": -0.0255678033135954,
+      "tm_score": 0.9516000124962716,
+      "rmsd_kabsch_A": 2.329426773177664
+    }
+  ]
+}

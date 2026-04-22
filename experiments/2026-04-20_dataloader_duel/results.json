@@ -1,0 +1,45 @@
+{
+  "rows": [
+    {
+      "system": "AK",
+      "n": 214,
+      "edges": 2948,
+      "swift_us_best": 5.833,
+      "scipy_us_best": 18.0,
+      "python_us_best": 218.875,
+      "swift_vs_scipy": 3.0858906223212754,
+      "swift_vs_python": 37.523572775587176
+    },
+    {
+      "system": "MBP",
+      "n": 370,
+      "edges": 5056,
+      "swift_us_best": 5.792,
+      "scipy_us_best": 19.75,
+      "python_us_best": 384.5,
+      "swift_vs_scipy": 3.409875690607735,
+      "swift_vs_python": 66.38466850828729
+    },
+    {
+      "system": "Abl",
+      "n": 262,
+      "edges": 3630,
+      "swift_us_best": 5.0,
+      "scipy_us_best": 20.0,
+      "python_us_best": 262.167,
+      "swift_vs_scipy": 4.0,
+      "swift_vs_python": 52.43339999999999
+    },
+    {
+      "system": "ribosome",
+      "n": 10739,
+      "edges": 152946,
+      "swift_us_best": 127.667,
+      "scipy_us_best": 287.25,
+      "python_us_best": 11759.542,
+      "swift_vs_scipy": 2.249994125341709,
+      "swift_vs_python": 92.11105454032757
+    }
+  ],
+  "note": "best of 10 runs (Swift, SciPy); best of 3 (Python)."
+}
