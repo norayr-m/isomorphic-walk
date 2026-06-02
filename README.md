@@ -230,7 +230,7 @@ viewers/                  Three web-based NGL 3D viewers (HIV-1 capsid
                           scaling, allosteric pathway on PTP1B,
                           IsoWalk variant comparison)
 examples/quickstart.py    Minimal usage example
-LICENSE                   GPLv3
+LICENSE                   Apache 2.0
 ```
 
 ## Reproducing
@@ -270,7 +270,7 @@ these specific variants.
 
 ## License
 
-GPLv3. See `LICENSE`.
+Apache 2.0. See `LICENSE`.
 
 ## Acknowledgements
 
