@@ -114,6 +114,33 @@ seed-residue parsing issues and were dropped without substitution per
 the locked protocol. **Median ΔF1 = +0.0707**. The pre-registered
 acceptance gate was ΔF1 ≥ +0.05 AND ≥ 70 % wins; both cleared.
 
+**Absolute agreement is low, and that matters.** The result above is a
+*relative* win over the baseline. Absolute overlap with the published
+allosteric residue lists is weak:
+
+| System | ΔF1 vs baseline | absolute F1 (BFS-tube) |
+|---|---:|---:|
+| IGPS | +0.098 | 0.393 |
+| PTP1B | +0.113 | 0.320 |
+| β₂-AR | +0.071 | 0.222 |
+| PFK | +0.015 | 0.185 |
+| ATCase | +0.138 | 0.171 |
+| Hsp70 | +0.014 | 0.111 |
+| PKA | −0.085 | 0.069 |
+
+Median absolute F1 ≈ **0.185**. The honest reading: the contact network
+beats a straight line, but neither comes close to reproducing the
+literature lists. This is evidence that the graph carries *some*
+pathway information — not a usable pathway predictor.
+
+Three further caveats we would rather state than have a reader find.
+The Euclidean-cylinder baseline is weak: that chain connectivity beats
+a straight line is close to a priori. The effect is small on a small
+sample: median +0.07 over seven systems after three were dropped,
+against a gate of +0.05 and 70 % wins — cleared, but not by much. And
+the arbiter was a language model, whereas this acceptance criterion is
+fully mechanisable and should be a script in any future round.
+
 The mechanism in plain words: the residues identified by the BFS-tube
 are those that lie on a graph-shortest-path corridor between the two
 seeds — the algorithm finds residues that follow the protein chain and
